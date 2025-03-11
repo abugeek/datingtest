@@ -52,46 +52,55 @@ class _InterestsContainerWidgetWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12.0),
-        border: Border.all(
-          color: widget.chosenIds!.contains(widget.id)
-              ? FlutterFlowTheme.of(context).primary500
-              : FlutterFlowTheme.of(context).accent4,
+    return InkWell(
+      splashColor: Colors.transparent,
+      focusColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      onTap: () async {
+        await widget.onTap?.call();
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          border: Border.all(
+            color: widget.chosenIds!.contains(widget.id)
+                ? FlutterFlowTheme.of(context).primary500
+                : FlutterFlowTheme.of(context).accent4,
+          ),
         ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.all(12.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CachedNetworkImage(
-              fadeInDuration: Duration(milliseconds: 500),
-              fadeOutDuration: Duration(milliseconds: 500),
-              imageUrl: functions.stringToImage(widget.image!)!,
-              width: 20.0,
-              height: 20.0,
-              fit: BoxFit.cover,
-              errorWidget: (context, error, stackTrace) => Image.asset(
-                'assets/images/error_image.png',
+        child: Padding(
+          padding: EdgeInsets.all(12.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CachedNetworkImage(
+                fadeInDuration: Duration(milliseconds: 500),
+                fadeOutDuration: Duration(milliseconds: 500),
+                imageUrl: functions.stringToImage(widget.image!)!,
                 width: 20.0,
                 height: 20.0,
                 fit: BoxFit.cover,
+                errorWidget: (context, error, stackTrace) => Image.asset(
+                  'assets/images/error_image.png',
+                  width: 20.0,
+                  height: 20.0,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            Text(
-              valueOrDefault<String>(
-                widget.title,
-                'null',
+              Text(
+                valueOrDefault<String>(
+                  widget.title,
+                  'null',
+                ),
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Space Grotesk',
+                      letterSpacing: 0.0,
+                    ),
               ),
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Space Grotesk',
-                    letterSpacing: 0.0,
-                  ),
-            ),
-          ].divide(SizedBox(width: 12.0)),
+            ].divide(SizedBox(width: 12.0)),
+          ),
         ),
       ),
     );
