@@ -555,6 +555,52 @@ class _LoginWidgetState extends State<LoginWidget>
                                                   .primaryBackground,
                                         ),
                                       ),
+                                FFButtonWidget(
+                                  onPressed: () async {
+                                    GoRouter.of(context).prepareAuthEvent();
+                                    final user = await authManager
+                                        .signInAnonymously(context);
+                                    if (user == null) {
+                                      return;
+                                    }
+
+                                    context.goNamedAuth(
+                                        HomeWidget.routeName, context.mounted);
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'fjadxxaa' /* Continue Anonymously */,
+                                  ),
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.mask,
+                                    size: 20.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 230.0,
+                                    height: 44.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Space Grotesk',
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                    elevation: 0.0,
+                                    borderSide: BorderSide(
+                                      color: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    hoverColor: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                  ),
+                                ),
                               ],
                             ),
                           ),

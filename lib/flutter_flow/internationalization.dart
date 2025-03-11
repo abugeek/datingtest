@@ -302,6 +302,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuer avec Apple',
       'ru': 'Продолжить с Apple',
     },
+    'fjadxxaa': {
+      'en': 'Continue Anonymously',
+      'de': 'Weiter mit Apple',
+      'es': 'Continuar con Apple',
+      'fr': 'Continuer avec Apple',
+      'ru': 'Продолжить с Apple',
+    },
     'a728gczu': {
       'en': 'Home',
       'de': 'Heim',
