@@ -135,9 +135,9 @@ class _BottomFilterMatchingWidgetState
                 min: 18.0,
                 max: 100.0,
                 value: _model.sliderValue2 ??= 18.0,
-                label: _model.sliderValue2?.toStringAsFixed(2),
+                label: _model.sliderValue2?.toStringAsFixed(0),
                 onChanged: (newValue) {
-                  newValue = double.parse(newValue.toStringAsFixed(2));
+                  newValue = double.parse(newValue.toStringAsFixed(0));
                   safeSetState(() => _model.sliderValue2 = newValue);
                 },
               ),
@@ -199,9 +199,13 @@ class _BottomFilterMatchingWidgetState
                     model: _model.mainButtonOutlineWidgetModel,
                     updateCallback: () => safeSetState(() {}),
                     child: MainButtonOutlineWidgetWidget(
-                      title: 'Clear All',
+                      title: FFLocalizations.of(context).getText(
+                        'xuwe103l' /* Clear All */,
+                      ),
                       isDisable: false,
-                      onTap: () async {},
+                      onTap: () async {
+                        Navigator.pop(context);
+                      },
                     ),
                   ),
                 ),
@@ -210,9 +214,13 @@ class _BottomFilterMatchingWidgetState
                     model: _model.mainButtonFillWidgetModel,
                     updateCallback: () => safeSetState(() {}),
                     child: MainButtonFillWidgetWidget(
-                      title: 'Apply',
+                      title: FFLocalizations.of(context).getText(
+                        '52nrut45' /* Apply */,
+                      ),
                       isDisable: false,
-                      onTap: () async {},
+                      onTap: () async {
+                        Navigator.pop(context);
+                      },
                     ),
                   ),
                 ),

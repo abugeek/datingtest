@@ -758,6 +758,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Non binaire',
       'ru': 'Небинарный',
     },
+    'xuwe103l': {
+      'en': 'Clear All',
+      'de': '',
+      'es': '',
+      'fr': '',
+      'ru': '',
+    },
+    '52nrut45': {
+      'en': 'Apply',
+      'de': '',
+      'es': '',
+      'fr': '',
+      'ru': '',
+    },
   },
   // Miscellaneous
   {
