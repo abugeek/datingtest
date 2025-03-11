@@ -48,36 +48,45 @@ class _SelectedContainerWidgetWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 125.0,
-      height: 125.0,
-      decoration: BoxDecoration(
-        color: widget.title == widget.chosenTitle
-            ? FlutterFlowTheme.of(context).secondaryBackground
-            : FlutterFlowTheme.of(context).primaryBackground,
-        borderRadius: BorderRadius.circular(12.0),
-        border: Border.all(
+    return InkWell(
+      splashColor: Colors.transparent,
+      focusColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      onTap: () async {
+        await widget.onTap?.call();
+      },
+      child: Container(
+        width: 125.0,
+        height: 125.0,
+        decoration: BoxDecoration(
           color: widget.title == widget.chosenTitle
-              ? FlutterFlowTheme.of(context).primary500
-              : FlutterFlowTheme.of(context).accent4,
-        ),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          widget.icon!,
-          Text(
-            valueOrDefault<String>(
-              widget.title,
-              'Male',
-            ),
-            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Space Grotesk',
-                  letterSpacing: 0.0,
-                ),
+              ? FlutterFlowTheme.of(context).secondaryBackground
+              : FlutterFlowTheme.of(context).primaryBackground,
+          borderRadius: BorderRadius.circular(12.0),
+          border: Border.all(
+            color: widget.title == widget.chosenTitle
+                ? FlutterFlowTheme.of(context).primary500
+                : FlutterFlowTheme.of(context).accent4,
           ),
-        ].divide(SizedBox(height: 12.0)),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            widget.icon!,
+            Text(
+              valueOrDefault<String>(
+                widget.title,
+                'Male',
+              ),
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Space Grotesk',
+                    letterSpacing: 0.0,
+                  ),
+            ),
+          ].divide(SizedBox(height: 12.0)),
+        ),
       ),
     );
   }
