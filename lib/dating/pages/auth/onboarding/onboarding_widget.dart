@@ -294,28 +294,24 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation1']!),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 16.0, 0.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'ummqvm6k' /* Amet minim mollit non deserunt... */,
-                                                ),
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Space Grotesk',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'textOnPageLoadAnimation2']!),
-                                            ),
-                                          ],
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'ummqvm6k' /* Amet minim mollit non deserunt... */,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                              maxLines: 2,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Space Grotesk',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ).animateOnPageLoad(animationsMap[
+                                                'textOnPageLoadAnimation2']!),
+                                          ].divide(SizedBox(height: 12.0)),
                                         ),
                                       ),
                                       Padding(
@@ -345,28 +341,24 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation3']!),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 16.0, 0.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'aw5zhtvf' /* Amet minim mollit non deserunt... */,
-                                                ),
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Space Grotesk',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'textOnPageLoadAnimation4']!),
-                                            ),
-                                          ],
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'aw5zhtvf' /* Amet minim mollit non deserunt... */,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                              maxLines: 2,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Space Grotesk',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ).animateOnPageLoad(animationsMap[
+                                                'textOnPageLoadAnimation4']!),
+                                          ].divide(SizedBox(height: 12.0)),
                                         ),
                                       ),
                                       Padding(
@@ -396,28 +388,24 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation5']!),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 16.0, 0.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '39ra9bjv' /* Amet minim mollit non deserunt... */,
-                                                ),
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Space Grotesk',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'textOnPageLoadAnimation6']!),
-                                            ),
-                                          ],
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '39ra9bjv' /* Amet minim mollit non deserunt... */,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                              maxLines: 2,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Space Grotesk',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ).animateOnPageLoad(animationsMap[
+                                                'textOnPageLoadAnimation6']!),
+                                          ].divide(SizedBox(height: 12.0)),
                                         ),
                                       ),
                                     ],
