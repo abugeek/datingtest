@@ -119,7 +119,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.network(
-                                    'https://picsum.photos/seed/570/600',
+                                    gridViewProfilesRow.pictures.lastOrNull!,
                                     width: 200.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
