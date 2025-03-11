@@ -140,7 +140,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     child: ProfileImageWidgetWidget(
                       height: 150.0,
                       width: 150.0,
-                      isEdit: false,
+                      isEdit: true,
                       imageLink: valueOrDefault<String>(
                         (currentUserDocument?.pictures.toList() ?? [])
                             .lastOrNull
@@ -553,37 +553,30 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     ].divide(SizedBox(height: 16.0)),
                   ),
                 ),
-                InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed(SelectGenderWidget.routeName);
-                  },
-                  child: wrapWithModel(
-                    model: _model.mainButtonFillWidgetModel,
-                    updateCallback: () => safeSetState(() {}),
-                    child: Hero(
-                      tag: 'main-button',
-                      transitionOnUserGestures: true,
-                      child: Material(
-                        color: Colors.transparent,
-                        child: MainButtonFillWidgetWidget(
-                          title: FFLocalizations.of(context).getText(
-                            'cpx11gyp' /* Continue */,
-                          ),
-                          isDisable: false,
-                          onTap: () async {
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              displayName: _model.nameTextController.text,
-                              email: _model.emailTextController.text,
-                              phoneNumber: _model.mobileTextController.text,
-                              dateOfBirth: _model.localDate,
-                            ));
-                          },
+                wrapWithModel(
+                  model: _model.mainButtonFillWidgetModel,
+                  updateCallback: () => safeSetState(() {}),
+                  child: Hero(
+                    tag: 'main-button',
+                    transitionOnUserGestures: true,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: MainButtonFillWidgetWidget(
+                        title: FFLocalizations.of(context).getText(
+                          'cpx11gyp' /* Continue */,
                         ),
+                        isDisable: false,
+                        onTap: () async {
+                          await currentUserReference!
+                              .update(createUsersRecordData(
+                            displayName: _model.nameTextController.text,
+                            email: _model.emailTextController.text,
+                            phoneNumber: _model.mobileTextController.text,
+                            dateOfBirth: _model.localDate,
+                          ));
+
+                          context.pushNamed(SelectGenderWidget.routeName);
+                        },
                       ),
                     ),
                   ),
