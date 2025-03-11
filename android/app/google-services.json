@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479497004078",
+    "project_id": "datingtest-ec126",
+    "storage_bucket": "datingtest-ec126.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479497004078:android:09b8c1aa53d50bd5fbabbf",
+        "android_client_info": {
+          "package_name": "com.mycompany.datingtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKCJ7M_-80SZMwfgpTYIgmwi7yo22vs7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
