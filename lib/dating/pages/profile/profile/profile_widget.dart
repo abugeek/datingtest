@@ -163,108 +163,105 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     ].divide(SizedBox(height: 8.0)),
                   ),
                 ),
-                Expanded(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(EditProfileWidget.routeName);
-                          },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  FaIcon(
-                                    FontAwesomeIcons.userCircle,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 24.0,
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed(EditProfileWidget.routeName);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.userCircle,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 24.0,
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'ymu7av9g' /* Personal Detail */,
                                   ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'ymu7av9g' /* Personal Detail */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyLarge
-                                        .override(
-                                          fontFamily: 'Space Grotesk',
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ].divide(SizedBox(width: 16.0)),
-                              ),
-                              Icon(
-                                Icons.play_arrow_rounded,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 24.0,
-                              ),
-                            ],
-                          ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: 'Space Grotesk',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ].divide(SizedBox(width: 16.0)),
+                            ),
+                            Icon(
+                              Icons.play_arrow_rounded,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24.0,
+                            ),
+                          ],
                         ),
                       ),
-                      if (!valueOrDefault<bool>(
-                          currentUserDocument?.isPremium, false))
-                        Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: AuthUserStreamWidget(
-                            builder: (context) => InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                context.pushNamed(SubscriptionWidget.routeName);
-                              },
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Icon(
-                                        Icons.workspace_premium_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 24.0,
+                    ),
+                    if (!valueOrDefault<bool>(
+                        currentUserDocument?.isPremium, false))
+                      Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: AuthUserStreamWidget(
+                          builder: (context) => InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(SubscriptionWidget.routeName);
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      Icons.workspace_premium_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 24.0,
+                                    ),
+                                    Text(
+                                      FFLocalizations.of(context).getText(
+                                        '434adhr3' /* Premium */,
                                       ),
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          '434adhr3' /* Premium */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .override(
-                                              fontFamily: 'Space Grotesk',
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                    ].divide(SizedBox(width: 16.0)),
-                                  ),
-                                  Icon(
-                                    Icons.play_arrow_rounded,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 24.0,
-                                  ),
-                                ],
-                              ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .override(
+                                            fontFamily: 'Space Grotesk',
+                                            letterSpacing: 0.0,
+                                          ),
+                                    ),
+                                  ].divide(SizedBox(width: 16.0)),
+                                ),
+                                Icon(
+                                  Icons.play_arrow_rounded,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 24.0,
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                    ],
-                  ),
+                      ),
+                  ],
                 ),
                 FlutterFlowLanguageSelector(
                   width: 200.0,

@@ -176,7 +176,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uw63ma8f': {
       'en': 'Find your partner with us',
       'de': 'Finden Sie Ihren Partner bei uns',
-      'es': 'Encuentra a tu pareja con nosotros',
+      'es': 'Encuentra tu pareja con nosotros',
       'fr': 'Trouvez votre partenaire avec nous',
       'ru': 'Найдите своего партнера у нас',
     },
@@ -185,7 +185,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'es': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'fr': 'Amet minim mollit non désertant sit aliqua dolor do amet sint.',
-      'ru': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
+      'ru': 'Амет миним моллит нон дезерунт сит аликва долор ду амет синт.',
     },
     'wg6ursos': {
       'en': 'Dating better than ever before',
@@ -199,7 +199,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'es': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'fr': 'Amet minim mollit non désertant sit aliqua dolor do amet sint.',
-      'ru': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
+      'ru': 'Амет миним моллит нон дезерунт сит аликва долор ду амет синт.',
     },
     'ax8wbgg8': {
       'en': 'Find your perfect match',
@@ -213,7 +213,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'es': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
       'fr': 'Amet minim mollit non désertant sit aliqua dolor do amet sint.',
-      'ru': 'Amet minim mollit non deserunt sit aliqua dolor do amet sint.',
+      'ru': 'Амет миним моллит нон дезерунт сит аликва долор ду амет синт.',
     },
     '03xbmjgo': {
       'en': 'Next',
@@ -322,7 +322,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'tu2q0u6j': {
       'en': 'Please add your profile details here',
       'de': 'Bitte fügen Sie hier Ihre Profildetails hinzu',
-      'es': 'Añade los detalles de tu perfil aquí',
+      'es': 'Por favor, añade los detalles de tu perfil aquí',
       'fr': 'Veuillez ajouter les détails de votre profil ici',
       'ru': 'Пожалуйста, добавьте данные вашего профиля здесь',
     },
@@ -484,7 +484,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Below are your chats',
       'de': 'Unten sind Ihre Chats',
       'es': 'A continuación se muestran sus chats',
-      'fr': 'Vous trouverez ci-dessous vos discussions',
+      'fr': 'Ci-dessous vos discussions',
       'ru': 'Ниже приведены ваши чаты',
     },
     'bhcnp2md': {
@@ -500,7 +500,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de':
           'Das war wirklich toll, ich bin so froh, dass wir uns dieses Wochenende treffen konnten.',
       'es':
-          'Esto fue realmente genial, estoy muy contento de que pudiéramos ponernos al día este fin de semana.',
+          'Esto fue realmente genial, estoy tan feliz de que pudiéramos ponernos al día este fin de semana.',
       'fr':
           'C\'était vraiment super, je suis si heureux que nous ayons pu nous rattraper ce week-end.',
       'ru':
@@ -658,7 +658,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'zydqm0ob': {
       'en': 'Annual (save \$12)',
       'de': 'Jährlich (12 \$ sparen)',
-      'es': 'Anual (ahorra \$12)',
+      'es': 'Anual (ahorre \$12)',
       'fr': 'Annuel (économisez 12 \$)',
       'ru': 'Ежегодно (экономьте 12 долларов)',
     },
@@ -693,7 +693,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de':
           'Fahren Sie mit eingeschränktem Zugriff kostenlos fort. Durchsuchen Sie Blogs und Videos, die Ihnen auf Ihrer Reise helfen sollen!',
       'es':
-          'Continúa con acceso limitado y gratuito. ¡Explora blogs y videos que te ayudarán en tu camino!',
+          'Continúa con acceso limitado y sin costo. ¡Explora blogs y videos que te ayudarán en tu recorrido!',
       'fr':
           'Continuez avec un accès limité et gratuit. Parcourez les blogs et vidéos destinés à vous aider dans votre parcours !',
       'ru':
@@ -760,17 +760,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'xuwe103l': {
       'en': 'Clear All',
-      'de': '',
-      'es': '',
-      'fr': '',
-      'ru': '',
+      'de': 'Alles löschen',
+      'es': 'Limpiar todo',
+      'fr': 'Tout effacer',
+      'ru': 'Очистить все',
     },
     '52nrut45': {
       'en': 'Apply',
-      'de': '',
-      'es': '',
-      'fr': '',
-      'ru': '',
+      'de': 'Anwenden',
+      'es': 'Aplicar',
+      'fr': 'Appliquer',
+      'ru': 'Применять',
     },
   },
   // Miscellaneous
