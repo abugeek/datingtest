@@ -115,12 +115,18 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     height: 200.0,
                     width: 200.0,
                     isEdit: false,
-                    imageLink: (currentUserDocument?.pictures.toList() ?? [])
-                        .lastOrNull!
-                        .imageLink,
-                    blurHash: (currentUserDocument?.pictures.toList() ?? [])
-                        .lastOrNull!
-                        .hash,
+                    imageLink: valueOrDefault<String>(
+                      (currentUserDocument?.pictures.toList() ?? [])
+                          .lastOrNull
+                          ?.imageLink,
+                      'https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_960_720.png',
+                    ),
+                    blurHash: valueOrDefault<String>(
+                      (currentUserDocument?.pictures.toList() ?? [])
+                          .lastOrNull
+                          ?.hash,
+                      'L6Pj0^jE.AyE_3t7t7R**0o#DgR4',
+                    ),
                   ),
                 ),
               ),
