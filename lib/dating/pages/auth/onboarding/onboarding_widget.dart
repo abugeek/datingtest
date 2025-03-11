@@ -249,237 +249,215 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 230.0,
-                            child: Stack(
-                              children: [
-                                Padding(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          height: 230.0,
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 50.0),
+                                child: PageView(
+                                  controller: _model.pageViewController ??=
+                                      PageController(initialPage: 0),
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          48.0, 0.0, 48.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'uw63ma8f' /* Find your partner with us */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  fontSize: 32.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation1']!),
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'ummqvm6k' /* Amet minim mollit non deserunt... */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            maxLines: 2,
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelLarge
+                                                .override(
+                                                  fontFamily: 'Space Grotesk',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation2']!),
+                                        ].divide(SizedBox(height: 12.0)),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          48.0, 0.0, 48.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'wg6ursos' /* Dating better than ever before */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  fontSize: 32.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation3']!),
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'aw5zhtvf' /* Amet minim mollit non deserunt... */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            maxLines: 2,
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelLarge
+                                                .override(
+                                                  fontFamily: 'Space Grotesk',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation4']!),
+                                        ].divide(SizedBox(height: 12.0)),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          48.0, 0.0, 48.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'ax8wbgg8' /* Find your perfect match */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  fontSize: 32.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation5']!),
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              '39ra9bjv' /* Amet minim mollit non deserunt... */,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            maxLines: 2,
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelLarge
+                                                .override(
+                                                  fontFamily: 'Space Grotesk',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textOnPageLoadAnimation6']!),
+                                        ].divide(SizedBox(height: 12.0)),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 1.0),
+                                child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 50.0),
-                                  child: PageView(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child:
+                                      smooth_page_indicator.SmoothPageIndicator(
                                     controller: _model.pageViewController ??=
                                         PageController(initialPage: 0),
-                                    scrollDirection: Axis.horizontal,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            48.0, 0.0, 48.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'uw63ma8f' /* Find your partner with us */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        fontSize: 32.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w800,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation1']!),
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'ummqvm6k' /* Amet minim mollit non deserunt... */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              maxLines: 2,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Space Grotesk',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation2']!),
-                                          ].divide(SizedBox(height: 12.0)),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            48.0, 0.0, 48.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'wg6ursos' /* Dating better than ever before */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        fontSize: 32.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w800,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation3']!),
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'aw5zhtvf' /* Amet minim mollit non deserunt... */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              maxLines: 2,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Space Grotesk',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation4']!),
-                                          ].divide(SizedBox(height: 12.0)),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            48.0, 0.0, 48.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'ax8wbgg8' /* Find your perfect match */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        fontSize: 32.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w800,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation5']!),
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '39ra9bjv' /* Amet minim mollit non deserunt... */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              maxLines: 2,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Space Grotesk',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation6']!),
-                                          ].divide(SizedBox(height: 12.0)),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 10.0),
-                                    child: smooth_page_indicator
-                                        .SmoothPageIndicator(
-                                      controller: _model.pageViewController ??=
-                                          PageController(initialPage: 0),
-                                      count: 3,
-                                      axisDirection: Axis.horizontal,
-                                      onDotClicked: (i) async {
-                                        await _model.pageViewController!
-                                            .animateToPage(
-                                          i,
-                                          duration: Duration(milliseconds: 500),
-                                          curve: Curves.ease,
-                                        );
-                                        safeSetState(() {});
-                                      },
-                                      effect: smooth_page_indicator
-                                          .ExpandingDotsEffect(
-                                        expansionFactor: 3.0,
-                                        spacing: 8.0,
-                                        radius: 16.0,
-                                        dotWidth: 8.0,
-                                        dotHeight: 8.0,
-                                        dotColor: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        activeDotColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                        paintStyle: PaintingStyle.fill,
-                                      ),
+                                    count: 3,
+                                    axisDirection: Axis.horizontal,
+                                    onDotClicked: (i) async {
+                                      await _model.pageViewController!
+                                          .animateToPage(
+                                        i,
+                                        duration: Duration(milliseconds: 500),
+                                        curve: Curves.ease,
+                                      );
+                                      safeSetState(() {});
+                                    },
+                                    effect: smooth_page_indicator
+                                        .ExpandingDotsEffect(
+                                      expansionFactor: 3.0,
+                                      spacing: 8.0,
+                                      radius: 16.0,
+                                      dotWidth: 8.0,
+                                      dotHeight: 8.0,
+                                      dotColor: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                      activeDotColor:
+                                          FlutterFlowTheme.of(context).primary,
+                                      paintStyle: PaintingStyle.fill,
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          wrapWithModel(
-                            model: _model.mainButtonFillWidgetModel,
-                            updateCallback: () => safeSetState(() {}),
-                            child: Hero(
-                              tag: 'main-button',
-                              transitionOnUserGestures: true,
-                              child: Material(
-                                color: Colors.transparent,
-                                child: MainButtonFillWidgetWidget(
-                                  title: FFLocalizations.of(context).getText(
-                                    '03xbmjgo' /* Next */,
-                                  ),
-                                  isDisable: false,
-                                  onTap: () async {
-                                    if (_model.pageViewCurrentIndex < 2) {
-                                      await _model.pageViewController?.nextPage(
-                                        duration: Duration(milliseconds: 300),
-                                        curve: Curves.ease,
-                                      );
-                                    } else {
-                                      context.pushNamed(LoginWidget.routeName);
-                                    }
-                                  },
+                        ),
+                        wrapWithModel(
+                          model: _model.mainButtonFillWidgetModel,
+                          updateCallback: () => safeSetState(() {}),
+                          child: Hero(
+                            tag: 'main-button',
+                            transitionOnUserGestures: true,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: MainButtonFillWidgetWidget(
+                                title: FFLocalizations.of(context).getText(
+                                  '03xbmjgo' /* Next */,
                                 ),
+                                isDisable: false,
+                                onTap: () async {
+                                  if (_model.pageViewCurrentIndex < 2) {
+                                    await _model.pageViewController?.nextPage(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.ease,
+                                    );
+                                  } else {
+                                    context.pushNamed(LoginWidget.routeName);
+                                  }
+                                },
                               ),
                             ),
                           ),
-                        ].divide(SizedBox(height: 12.0)),
-                      ),
+                        ),
+                      ].divide(SizedBox(height: 12.0)),
                     ),
                   ),
                 ),
