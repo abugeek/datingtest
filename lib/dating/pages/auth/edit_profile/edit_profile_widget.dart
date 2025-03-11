@@ -141,9 +141,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       height: 150.0,
                       width: 150.0,
                       isEdit: false,
-                      imageLink: (currentUserDocument?.pictures.toList() ?? [])
-                          .lastOrNull!
-                          .imageLink,
+                      imageLink: valueOrDefault<String>(
+                        (currentUserDocument?.pictures.toList() ?? [])
+                            .lastOrNull
+                            ?.imageLink,
+                        'https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_960_720.png',
+                      ),
                       blurHash: valueOrDefault<String>(
                         (currentUserDocument?.pictures.toList() ?? [])
                             .lastOrNull
